@@ -1,0 +1,60 @@
+.banner {
+  width: 100%;
+  height: 69.2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $light;
+  text-align: center;
+  padding: 6rem;
+  @include mediaQuery {
+    height: 55.2rem;
+  }
+  h1 {
+    font-size: clamp(3.5rem, 7vw, 5.6rem);
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    font-weight: 500;
+  }
+  ul {
+    inset-block-start: flexItem(center);
+    gap: 3rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+
+    a {
+      color: $accent;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.iphone-pro {
+    background-image: url("/images/banner-iphone-pro.jpg");
+    @include mediaQuery($break-sm) {
+      background-image: url("/images/banner-iphone-pro-sm.jpg");
+    }
+  }
+
+  &.iphone {
+    background-image: url("/images/banner-iphone.jpg");
+    color: $text-dark;
+    height: 73.6rem;
+    @include mediaQuery($break-sm) {
+      background-image: url("/images/banner-iphone-sm.jpg");
+    }
+  }
+
+  &.macbook-air {
+    background-image: url("/images/banner-air.jpg");
+    height: 73.6rem;
+    color: $text-dark;
+    @include mediaQuery($break-sm) {
+      background-image: url("/images/banner-air-sm.jpg");
+    }
+  }
+}

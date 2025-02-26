@@ -1,0 +1,11 @@
+@mixin flexItem($content:flex-start, $items:flex-start) {
+    display: flex;
+    justify-content: $content;
+    align-items: $items;
+}
+
+@mixin mediaQuery($breakpoint:$break-sm) {
+    @media screen and (max-width:$breakpoint){
+        @content;
+    }
+}
