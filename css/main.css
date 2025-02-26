@@ -204,99 +204,6 @@ li a {
   padding-bottom: 5rem;
 }
 
-.banner {
-  width: 100%;
-  height: 69.2rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;
-  text-align: center;
-  padding: 6rem;
-}
-@media screen and (max-width: 520px) {
-  .banner {
-    height: 55.2rem;
-  }
-}
-.banner h1 {
-  font-size: clamp(3.5rem, 7vw, 5.6rem);
-  line-height: 1.2;
-  font-weight: 500;
-}
-.banner h3 {
-  font-size: clamp(1.8rem, 7vw, 2.8rem);
-  font-weight: 500;
-}
-.banner ul {
-  inset-block-start: flexItem(center);
-  gap: 3rem;
-  margin-top: 1rem;
-  font-size: 1.8rem;
-}
-.banner ul a {
-  color: #2997ff;
-}
-.banner ul a:hover {
-  text-decoration: underline;
-}
-.banner.iphone-pro {
-  background-image: url("/images/banner-iphone-pro.jpg");
-}
-@media screen and (max-width: 520px) {
-  .banner.iphone-pro {
-    background-image: url("/images/banner-iphone-pro-sm.jpg");
-  }
-}
-.banner.iphone {
-  background-image: url("/images/banner-iphone.jpg");
-  color: #1d1d1f;
-  height: 73.6rem;
-}
-@media screen and (max-width: 520px) {
-  .banner.iphone {
-    background-image: url("/images/banner-iphone-sm.jpg");
-  }
-}
-.banner.macbook-air {
-  background-image: url("/images/banner-air.jpg");
-  height: 73.6rem;
-  color: #1d1d1f;
-}
-@media screen and (max-width: 520px) {
-  .banner.macbook-air {
-    background-image: url("/images/banner-air-sm.jpg");
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .footer .grid {
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-  }
-}
-.footer .griditem h6 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-@media screen and (max-width: 520px) {
-  .footer .griditem ul {
-    max-height: 0;
-    height: auto;
-    overflow: hidden;
-    transition: 0.5s ease-in-out;
-  }
-  .footer .griditem ul.open {
-    max-height: 30rem;
-  }
-}
-.footer .griditem ul li {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-.footer p, .footer a {
-  font-size: 1.2rem;
-}
-
 header {
   background-color: rgba(36, 36, 36, 0.8);
   color: #fff;
@@ -315,6 +222,7 @@ header a {
 .toggle-menu {
   background-color: transparent;
   border: none;
+  display: none;
   align-self: center;
   margin-top: 0.8rem;
 }
@@ -322,8 +230,8 @@ header a {
   display: block;
   width: 2rem;
   height: 1px;
-  margin-top: 0.5rem;
-  background-color: #fff;
+  margin-bottom: 0.5rem;
+  background: #fff;
   transition: 0.2s ease-in;
 }
 
@@ -331,7 +239,7 @@ header a {
   transform: rotate(45deg) translate(2px, 2px);
 }
 .toggle-menu.open span:last-child {
-  transform: rotate(-45deg) translate(2px, 2px);
+  transform: rotate(-45deg) translate(2px, -2px);
 }
 
 @media screen and (max-width: 520px) {
@@ -346,7 +254,7 @@ header a {
     gap: 1rem !important;
     justify-content: flex-start !important;
     align-items: flex-start !important;
-    z-index: 99999;
+    z-index: 9999;
     overflow: hidden;
     transition: 0.5s ease-in;
   }
@@ -374,6 +282,72 @@ nav ul {
 }
 nav ul a {
   font-size: 1.2rem;
+}
+
+.banner {
+  width: 100%;
+  height: 69.2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6rem;
+}
+@media screen and (max-width: 520px) {
+  .banner {
+    height: 55.2rem;
+  }
+}
+.banner h1 {
+  font-size: clamp(3.5rem, 7vw, 5.6rem);
+  line-height: 1.2;
+  font-weight: 500;
+}
+.banner h3 {
+  font-size: clamp(1.8rem, 7vw, 2.8rem);
+  font-weight: 500;
+}
+.banner ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+.banner ul a {
+  color: #2997ff;
+}
+.banner ul a:hover {
+  text-decoration: underline;
+}
+.banner.iphone-pro {
+  background-image: url("../images/banner-iphone-pro.jpg");
+}
+@media screen and (max-width: 520px) {
+  .banner.iphone-pro {
+    background-image: url("../images/banner-iphone-pro-sm.jpg");
+  }
+}
+.banner.iphone {
+  background-image: url("../images/banner-iphone.jpg");
+  color: #1d1d1f;
+  height: 73.6rem;
+}
+@media screen and (max-width: 520px) {
+  .banner.iphone {
+    background-image: url("../images/banner-iphone-sm.jpg");
+  }
+}
+.banner.macbook-air {
+  background-image: url("../images/banner-air.jpg");
+  height: 73.6rem;
+  color: #1d1d1f;
+}
+@media screen and (max-width: 520px) {
+  .banner.macbook-air {
+    background-image: url("../images/banner-air-sm.jpg");
+  }
 }
 
 .slider {
@@ -415,7 +389,7 @@ nav ul a {
 }
 .slider__item__content button {
   padding: 1.2rem 2.4rem;
-  border-radius: 2rem;
+  border-radius: 3rem;
   border: none;
   background-color: #fff;
   cursor: pointer;
@@ -438,6 +412,7 @@ nav ul a {
   content: "";
   position: absolute;
   width: 3px;
+  height: 3px;
   border-radius: 50%;
   top: 15px;
   right: 0px;
@@ -486,6 +461,35 @@ button[data-action] {
   }
 }
 
+@media screen and (max-width: 520px) {
+  .footer .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+}
+.footer .griditem h6 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 520px) {
+  .footer .griditem ul {
+    max-height: 0;
+    height: auto;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+  }
+  .footer .griditem ul.open {
+    max-height: 30rem;
+  }
+}
+.footer .griditem ul li {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.footer p, .footer a {
+  font-size: 1.2rem;
+}
+
 .cta {
   text-align: center;
   margin-top: 4.256rem;
@@ -499,7 +503,7 @@ button[data-action] {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
-  padding: 0.1rem;
+  padding: 0 1rem;
 }
 @media screen and (max-width: 520px) {
   .product .wrapper {
@@ -543,50 +547,50 @@ button[data-action] {
   color: #2997ff;
 }
 .product__item.watch {
-  background-image: url("/images/promo-watch.jpg");
+  background-image: url("../images/promo-watch.jpg");
 }
 @media screen and (max-width: 520px) {
   .product__item.watch {
-    background-image: url("/images/promo-watch-sm.jpg");
+    background-image: url("../images/promo-watch-sm.jpg");
   }
 }
 .product__item.ipad {
-  background-image: url("/images/promo-ipadpro.jpg");
+  background-image: url("../images/promo-ipadpro.jpg");
 }
 @media screen and (max-width: 520px) {
   .product__item.ipad {
-    background-image: url("/images/promo-ipadpro-sm.jpg");
+    background-image: url("../images/promo-ipadpro-sm.jpg");
   }
 }
 .product__item.studio {
-  background-image: url("/images/promo-mac-studio.jpg");
+  background-image: url("../images/promo-mac-studio.jpg");
 }
 @media screen and (max-width: 520px) {
   .product__item.studio {
-    background-image: url("/images/promo-mac-studio-sm.jpg");
+    background-image: url("../images/promo-mac-studio-sm.jpg");
   }
 }
 .product__item.college {
-  background-image: url("/images/promo-college.jpg");
+  background-image: url("../images/promo-college.jpg");
 }
 @media screen and (max-width: 520px) {
   .product__item.college {
-    background-image: url("/images/promo-college-sm.jpg");
+    background-image: url("../images/promo-college-sm.jpg");
   }
 }
 .product__item.mac {
-  background-image: url("/images/promo-mac.jpg");
+  background-image: url("../images/promo-mac.jpg");
 }
 @media screen and (max-width: 520px) {
   .product__item.mac {
-    background-image: url("/images/promo-mac-sm.jpg");
+    background-image: url("../images/promo-mac-sm.jpg");
   }
 }
 .product__item.airpods {
-  background-image: url("/images/promo-airpods.jpg");
+  background-image: url("../images/promo-airpods.jpg");
 }
 @media screen and (max-width: 520px) {
   .product__item.airpods {
-    background-image: url("/images/promo-airpods-sm.jpg");
+    background-image: url("../images/promo-airpods-sm.jpg");
   }
-}/*# sourceMappingURL=main.min.css.map */
+}/*# sourceMappingURL=main.css.map */

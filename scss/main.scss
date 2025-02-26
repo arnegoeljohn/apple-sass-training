@@ -1,13 +1,16 @@
-@import "_01-variable";
-@import "_02-base";
-@import "_03-helper";
-@import "_04-mixins";
-@import "_05-utilities";
+@import "01-variable";
+@import "02-base";
+@import "03-helper";
+@import "04-mixins";
+@import "05-utilities";
 
-@import "../layout/_banner";
-@import "../layout/_footer";
-@import "../layout/_header";
-@import "../layout/_navigation";
-@import "../layout/_slider";
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/banner";
+@import "./layout/slider";
+@import "./layout/footer";
 
-@import "../page/_home";
+@import "./page/home";
+
+
+

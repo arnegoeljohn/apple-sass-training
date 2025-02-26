@@ -2,7 +2,8 @@ nav {
     ul {
         @include flexItem(space-between, center);
         a {
-            font-size: 1.2rem;
+            font-size: 1.2rem
         }
     }
 }
+
